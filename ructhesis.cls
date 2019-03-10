@@ -497,6 +497,8 @@ subsubsection/numberformat = \bf\zihao{5}
 \end{landscape}
 \restoregeometry
 }
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
 \RequirePackage{natbib}%参考文献
 \RequirePackage{caption2}
 \captionstyle{normal}
