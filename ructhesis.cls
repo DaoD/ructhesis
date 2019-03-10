@@ -7,7 +7,7 @@
 %% ructhesis.dtx  (with options: `cls')
 %%  Copyright (C) 2014--2016 Zebin Wang <me@zebinwang.com>
 %%  --------------------------------------------------------------------------
-%% 
+%%
 %%  This work may be distributed and/or modified under the
 %%  conditions of the LaTeX Project Public License, either
 %%  version 1.3c of this license or (at your option) any later
@@ -17,14 +17,14 @@
 %%     http://www.latex-project.org/lppl.txt
 %%  and version 1.3 or later is part of all distributions of
 %%  LaTeX version 2005/12/01 or later.
-%% 
+%%
 %%  This work has the LPPL maintenance status `maintained'.
-%% 
+%%
 %%  The Current Maintainers of this work is Zebin Wang.
-%% 
+%%
 %%  This work consists of the files RUCThesis.dtx and RUCThesis.ins
 %%  and the derived file RUCThesis.cls.
-%% 
+%%
 %%  --------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ructhesis}[2015/12/01 v1.0.0]
@@ -89,9 +89,9 @@ pdfsubject={中国人民大学学位论文}}
 \setsansfont{ArialMT}
 \setmonofont{CourierNewPSMT}
 \xeCJKsetup{AutoFakeSlant={true}}
-\setCJKmainfont{SimSun}
-\setCJKsansfont{SimHei}
-\setCJKmonofont{FangSong}
+\setCJKmainfont{SimSun.ttf}
+\setCJKsansfont{SimHei.ttf}
+\setCJKmonofont{FangSong.ttf}
 \newcommand{\rowspace}{%
 \setlength{\lineskiplimit}{2.625bp}
 \setlength{\lineskip}{2.625bp}
@@ -151,8 +151,9 @@ pdfsubject={中国人民大学学位论文}}
 \chead{}\renewcommand*{\headrulewidth}{0pt}
 \fancyfoot[CO,CE]{ 第 \thepage 页}
 \else
-\chead{}
-\renewcommand*{\headrulewidth}{0pt}
+%\chead{}
+\chead{\zihao{5}\@title}
+%\renewcommand*{\headrulewidth}{0pt}
 \if@twoside
 \fancyfoot[RO,LE]{\thepage}
 \else
@@ -300,7 +301,7 @@ chapter = {
 name = {第,章},
 number = \arabic{chapter}
 },
-chapter/format =\centering,
+chapter/format = \vspace{-15mm}\centering,
 chapter/numberformat = \bf\zihao{-2},
 chapter/nameformat = \sf\zihao{-2},
 chapter/titleformat = \sf\zihao{-2},
